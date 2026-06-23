@@ -1,0 +1,37 @@
+{
+  "id": "quintech-rfrouter",
+  "name": "Quintech RF Router",
+  "shortname": "Quintech RF",
+  "description": "Control a Quintech 16x1 RF router by sending TCP hex commands to port 9100. Build ID: FIX12-BUILD-CLEAN",
+  "version": "0.1.12-fix12-build-clean",
+  "license": "MIT",
+  "repository": "",
+  "bugs": "",
+  "maintainers": [
+    {
+      "name": "Eric Pfeiffer",
+      "email": "efife1@gmail.com"
+    }
+  ],
+  "runtime": {
+    "type": "node22",
+    "api": "nodejs-ipc",
+    "apiVersion": "1.14.0",
+    "entrypoint": "../dist/main.js"
+  },
+  "legacyIds": [],
+  "manufacturer": "Quintech",
+  "products": [
+    "16x1 RF Router"
+  ],
+  "keywords": [
+    "quintech",
+    "rf",
+    "router",
+    "16x1",
+    "tcp",
+    "hex",
+    "FIX10-LAB-STABLE",
+    "FIX12-BUILD-CLEAN"
+  ]
+}
