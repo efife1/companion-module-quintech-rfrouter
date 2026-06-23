@@ -1,36 +1,45 @@
 # Quintech RF Router Companion Module
 
-Bitfocus Companion v4.2.3 developer module for a Quintech 16x1 RF router.
+Version 1.0.0
 
-This version is modeled after Generic TCP/UDP behavior:
+## Description
 
-- Host/IP and TCP port fields are shown in Edit Connection
-- Default TCP port: 9100
-- Persistent TCP connection mode, similar to Generic TCP/UDP
-- Optional per-command TCP mode
-- `setNoDelay(true)` enabled
-- Fast reconnect option
-- Presets for outputs 1-16
+Bitfocus Companion module for controlling a Quintech 16x1 RF Router over TCP/IP.
 
-## Install
+## Features
+
+- TCP/IP control
+- User-configurable router IP address or hostname
+- User-configurable TCP port
+- Actions for inputs 1 through 16
+- Presets for inputs 1 through 16
+- Optional debug logging
+- Companion v4.2.3 compatibility
+
+## Default Connection Settings
+
+- TCP Port: 9100
+
+## Installation
+
+1. Enable Developer Modules in Companion.
+2. Set the Developer Modules Path to the parent folder that contains this module folder.
+3. Install this folder as `companion-module-quintech-rfrouter`.
+4. Run `npm install`.
+5. Run `npm run build`.
+6. Fully restart Companion.
+7. Add a new Quintech RF Router connection.
+8. Enter the Quintech router IP address and TCP port.
+
+## Build Commands
 
 ```bash
-rm -rf ~/CompanionModules/companion-module-quintech-rfrouter
-mkdir -p ~/CompanionModules
-cd ~/CompanionModules
-unzip ~/Downloads/companion-module-quintech-rfrouter-v423-fix8-generic-tcp-style.zip
-cd companion-module-quintech-rfrouter
 rm -rf node_modules package-lock.json
 npm config set registry https://registry.npmjs.org/
 npm install
 npm run build
 ```
 
-Restart Companion after building.
+## Release
 
-## Recommended settings
-
-- TCP Connection Mode: Persistent TCP connection, like Generic TCP/UDP
-- Connect / Send Timeout: 750 ms
-- Reconnect Interval: 500 ms
-- Debug logging: Off unless troubleshooting
+Version 1.0.0 is the initial stable release.

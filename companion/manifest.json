@@ -2,8 +2,8 @@
   "id": "quintech-rfrouter",
   "name": "Quintech RF Router",
   "shortname": "Quintech RF",
-  "description": "Control a Quintech 16x1 RF router by sending TCP hex commands to port 9100. Build ID: FIX12-BUILD-CLEAN",
-  "version": "0.1.12-fix12-build-clean",
+  "description": "Control a Quintech 16x1 RF Router over TCP/IP.",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": "",
   "bugs": "",
@@ -21,17 +21,6 @@
   },
   "legacyIds": [],
   "manufacturer": "Quintech",
-  "products": [
-    "16x1 RF Router"
-  ],
-  "keywords": [
-    "quintech",
-    "rf",
-    "router",
-    "16x1",
-    "tcp",
-    "hex",
-    "FIX10-LAB-STABLE",
-    "FIX12-BUILD-CLEAN"
-  ]
+  "products": ["16x1 RF Router"],
+  "keywords": ["quintech", "rf", "router", "16x1", "tcp", "hex"]
 }

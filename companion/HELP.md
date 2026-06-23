@@ -1,28 +1,35 @@
 # Quintech RF Router
 
-**Build ID: FIX12-BUILD-CLEAN**  
-**Module version: 0.1.12-fix12-build-clean**  
-**Companion target: v4.2.3 / @companion-module/base 1.14**
+Version 1.0.0
 
-Controls a Quintech 16x1 RF router over TCP.
+## Overview
 
-## Configuration Fields Expected in Edit Connection
+The Quintech RF Router module controls a Quintech 16x1 RF Router over TCP/IP.
 
-If this build is loaded correctly, the Edit Connection page should show:
+## Configuration
+
+The following fields are available in the Companion Edit Connection page:
 
 - Quintech Switch IP Address / Hostname
-- Quintech TCP Port, default 9100
+- Quintech TCP Port
 - Connect at startup
 - Debug logging
 
-## Commands
+## Default Settings
 
-Presets/actions are provided for RF inputs/outputs 1 through 16 using the Quintech integration document command table.
+- TCP Port: 9100
+- Connect at startup: Enabled
+- Debug logging: Disabled
 
-## Lab Notes
+## Actions
 
-This build rolls back to the stable persistent-TCP behavior and removes the experimental per-command and FIN-close logic.
+The module provides a Select RF Input action for inputs 1 through 16.
 
+## Presets
 
-## Fix11 Notes
-This build changes presets and variables to the Companion v4.2.3 / module-base 1.14 object format so the module process stays running and the Edit Connection config fields can load.
+Presets are provided for RF inputs 1 through 16.
+
+## Requirements
+
+- Bitfocus Companion v4.2.3
+- TCP/IP connectivity to the Quintech RF Router

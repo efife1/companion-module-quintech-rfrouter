@@ -1,7 +1,7 @@
 {
-  "name": "quintech-rfrouter",
-  "version": "0.1.12-fix12-build-clean",
-  "description": "Control a Quintech 16x1 RF router by sending TCP hex commands to port 9100. FIX12-BUILD-CLEAN",
+  "name": "companion-module-quintech-rfrouter",
+  "version": "1.0.0",
+  "description": "Bitfocus Companion module for controlling a Quintech 16x1 RF Router over TCP/IP.",
   "main": "dist/main.js",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
