@@ -3,10 +3,10 @@
   "name": "Quintech RF Router",
   "shortname": "Quintech RF",
   "description": "Control a Quintech 16x1 RF Router over TCP/IP.",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "license": "MIT",
-  "repository": "",
-  "bugs": "",
+  "repository": "git+https://github.com/efife1/companion-module-quintech-rfrouter.git",
+  "bugs": "https://github.com/efife1/companion-module-quintech-rfrouter/issues",
   "maintainers": [
     {
       "name": "Eric Pfeiffer",
@@ -21,6 +21,15 @@
   },
   "legacyIds": [],
   "manufacturer": "Quintech",
-  "products": ["16x1 RF Router"],
-  "keywords": ["quintech", "rf", "router", "16x1", "tcp", "hex"]
+  "products": [
+    "16x1 RF Router"
+  ],
+  "keywords": [
+    "quintech",
+    "rf",
+    "router",
+    "16x1",
+    "tcp",
+    "hex"
+  ]
 }

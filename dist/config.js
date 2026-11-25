@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DEFAULT_STATUS_POLL_MS = exports.DEFAULT_ACK_TIMEOUT_MS = void 0;
 exports.getConfigFields = getConfigFields;
+exports.DEFAULT_ACK_TIMEOUT_MS = 1000;
+exports.DEFAULT_STATUS_POLL_MS = 2000;
 function getConfigFields() {
     return [
         {
@@ -33,6 +36,49 @@ function getConfigFields() {
             label: 'Debug logging',
             width: 6,
             default: false,
+        },
+        {
+            type: 'static-text',
+            id: 'feedbackInfo',
+            label: 'Button feedback',
+            width: 12,
+            value: 'The switch ACKs each selection but never announces changes on its own. The module asks it for the active input (Quintech "Q" status query) on connect and at the poll interval, so front-panel changes are shown too.',
+        },
+        {
+            type: 'dropdown',
+            id: 'feedbackMode',
+            label: 'Feedback source',
+            width: 6,
+            default: 'ack',
+            choices: [
+                { id: 'ack', label: 'Switch ACK (recommended)' },
+                { id: 'write', label: 'Command sent (v1.0.0 behaviour, no ACK check)' },
+            ],
+        },
+        {
+            type: 'number',
+            id: 'ackTimeoutMs',
+            label: 'ACK timeout (ms)',
+            width: 6,
+            min: 100,
+            max: 10000,
+            default: exports.DEFAULT_ACK_TIMEOUT_MS,
+        },
+        {
+            type: 'checkbox',
+            id: 'statusQueryAtConnect',
+            label: 'Query switch status on connect',
+            width: 6,
+            default: true,
+        },
+        {
+            type: 'number',
+            id: 'statusPollMs',
+            label: 'Status poll interval (ms, 0 = off)',
+            width: 6,
+            min: 0,
+            max: 60000,
+            default: exports.DEFAULT_STATUS_POLL_MS,
         },
     ];
 }

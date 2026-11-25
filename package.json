@@ -1,15 +1,16 @@
 {
   "name": "companion-module-quintech-rfrouter",
-  "version": "1.0.0",
-  "description": "Bitfocus Companion module for controlling a Quintech 16x1 RF Router over TCP/IP.",
+  "version": "1.2.0",
+  "description": "Bitfocus Companion module for controlling a Quintech 16x1 RF Router over TCP/IP, with ACK-confirmed button feedback.",
   "main": "dist/main.js",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "dev": "tsc -w -p tsconfig.build.json"
+    "dev": "tsc -w -p tsconfig.build.json",
+    "test": "node tests/wire-test.js . && node tests/ack-feedback-test.js . && node tests/status-poll-test.js ."
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/efife1/companion-module-quintech-rfrouter.git"
   },
   "license": "MIT",
   "dependencies": {

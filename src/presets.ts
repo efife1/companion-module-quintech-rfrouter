@@ -1,5 +1,6 @@
 import type { CompanionPresetDefinitions } from '@companion-module/base'
 import { presetColors } from './actions.js'
+import { feedbackColors } from './feedbacks.js'
 
 export function getPresets(): CompanionPresetDefinitions {
   const presets: CompanionPresetDefinitions = {}
@@ -26,7 +27,18 @@ export function getPresets(): CompanionPresetDefinitions {
           up: [],
         },
       ],
-      feedbacks: [],
+      feedbacks: [
+        {
+          feedbackId: 'input_pending',
+          options: { input },
+          style: { bgcolor: feedbackColors.pendingBg, color: feedbackColors.pendingFg },
+        },
+        {
+          feedbackId: 'input_selected',
+          options: { input },
+          style: { bgcolor: feedbackColors.selectedBg, color: feedbackColors.selectedFg },
+        },
+      ],
     }
   }
 

@@ -21,6 +21,13 @@ function getActions(instance) {
                 await instance.selectInput(input);
             },
         },
+        query_status: {
+            name: 'Query Switch Status',
+            options: [],
+            callback: async () => {
+                await instance.queryStatus();
+            },
+        },
         raw_hex: {
             name: 'Send Raw Hex Command',
             options: [
